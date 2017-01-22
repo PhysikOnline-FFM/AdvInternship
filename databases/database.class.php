@@ -1,8 +1,4 @@
 <?php
-
-//error_reporting(-1);
-//ini_set('display_errors', 1);
-
 require_once('/home/elearning-www/public_html/elearning/ilias-5.1/Customizing/global/include/advIntership/databases/dbConnection.class.php');
 
 /**
