@@ -13,14 +13,14 @@ class DbConnection
   protected $dbTable;
   protected $db;
 
-  public function __construct($dbLink, $dbUser, $dbPassword, $dbTable)
+  public function __construct($dbLink, $dbName, $dbUser, $dbPassword)
   {
     $this->dbLink = $dbLink;
+    $this->dbTable = $dbName;
     $this->dbUser = $dbUser;
     $this->dbPassword = $dbPassword;
-    $this->dbTable = $dbTable;
 	
-	$this->initDb();
+	  $this->initDb();
   }
 
   public function __destruct()
@@ -31,6 +31,10 @@ class DbConnection
 
   public function initDb()
   {
+    $pdo = new PDO('pgsql:host=' . $this->dbLink . ';port=5432;dbname=' . $this->dbName, 'anyuser', 'pw');
+    $stmt = $pdo->prepare('SELECT * FROM sometable');
+    $stmt->execute();
+    $pdo = null;
     $this->db = new mysqli($this->dbLink, $this->dbUser, $this->dbPassword, $this->dbTable)
     or die("Unable to connect to Database with link ".$this->dbLink."!");
 

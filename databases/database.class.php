@@ -3,22 +3,7 @@ require_once('/home/elearning-www/public_html/elearning/ilias-5.1/Customizing/gl
 
 /**
  *
- *
- * Checks if student is student1
- * SELECT COUNT(snumber1) FROM tbl_partners WHERE tbl_partners.snumber1 = 'x'
- * returns: 0 or more
- *
- * TODO: Query: Update snumber1 to value of snumber2 if snumber1 student was snumber1
- * TODO: Query: Update snumber2 to NULL  if student was snumber2
- *
- * @author: Bastian
- * @date: 02.09.2016
- */
-
-/**
- * TODO: Extend over all documentation here.
- * class containing all functions necessary to communicate with the database
- * for the registration process
+ * TODO: Change to PDO
  *
  * @author LG, BK
  */
@@ -38,15 +23,15 @@ class Database extends DbConnection
 
 		$this->dbAI = new DbConnection(	// Sets up db-connection to 'fpraktikum'
 			$this->configAI['link'], 
+      $this->configAI['dbname'],
 			$this->configAI['username'], 
-			$this->configAI['passwd'], 
-			$this->configAI['dbname']);	
+			$this->configAI['passwd']);	
 		
 		$this->dbIL = new DbConnection(	// Sets up db-connection to 'ilias'
 			$this->configIL['link'], 
+      $this->configIL['dbname'],
 			$this->configIL['username'], 
-			$this->configIL['passwd'], 
-			$this->configIL['dbname']);	
+			$this->configIL['passwd']);	
 	}
 
   /**
@@ -62,8 +47,8 @@ class Database extends DbConnection
    *               TODO: Partner is not being counted yet.
    */
    
-   public function getMaxPlaces() {
-	   
+   public function getMaxPlaces($grade) {
+
    }
    
   public function freePlaces($semester) {
