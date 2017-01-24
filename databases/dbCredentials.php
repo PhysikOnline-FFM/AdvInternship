@@ -3,7 +3,7 @@
 [fpraktikum]
 link=localhost
 username=fpraktikum
-passwd="7SA&JbluEB%h!1TneR0q"
+passwd="***REMOVED***"
 dbname=fpraktikum-test
 tbl-anmeldung=anmeldungen
 tbl-angebote=angebote
@@ -14,7 +14,7 @@ tbl-partners="tbl_partners"
 [ilias]
 link=localhost
 username=ilias
-passwd="qcSTvtvJsfxhP4HQ"
+passwd="***REMOVED***"
 dbname="ilias-dev-4.3"
 tbl-name="usr_data"
 col-name="usr_id"
