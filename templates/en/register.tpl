@@ -1,6 +1,6 @@
 ﻿<div class='panel panel-default' style='background-color: white; border: 2px solid #b9b9b9'>
 	<div class='panel-heading' style='background-color: #b9b9b9;'>
-		{%REGISTER_HEADLINE} 
+		{%REGISTER_HEADLINE} ENGLISCH
 		<button  type='button' class='btn btn-default pull-right' data-target='#demo' data-toggle='collapse' >{%REGISTER_HELP_BUTTON_VALUE}</button>
 	</div>
 	<div class='panel-body'>

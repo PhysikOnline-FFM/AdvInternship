@@ -34,7 +34,7 @@ class Template
 	 * @return 	boolean
 	 */ 
 	public function load($template){
-		$this->templateName = $template.".tpl";
+		$this->templateName = LANG . "/" . $template.".tpl";
 		$this->templateFile = $this->templateDir.$this->templateName;
 		
 		// if filename is delivered, try to open file
